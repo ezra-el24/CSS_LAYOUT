@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Layout 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+    .frame {
+      border: 4px solid #333;
+      border-radius: 16px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      display: grid;
+      grid-template-rows: 80px auto 60px;
+      grid-template-columns: 150px 1fr;
+      grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+      gap: 20px;
+    }
+    .header {
+      grid-area: header;
+      background: lightblue;
+      border-radius: 12px;
+      border: 2px solid #3399cc;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background: lightgreen;
+      border-radius: 12px;
+      border: 2px solid #33aa66;
+      height: 200px;
+    }
+    .content {
+      grid-area: content;
+      background: lightpink;
+      border-radius: 12px;
+      border: 2px solid #cc6699;
+      height: 200px;
+    }
+    .footer {
+      grid-area: footer;
+      background: lightgray;
+      border-radius: 12px;
+      border: 2px solid #999999;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="header"></div>
+    <div class="sidebar"></div>
+    <div class="content"></div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
